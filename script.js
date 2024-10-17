@@ -54,7 +54,13 @@ document.getElementById("profile-form").addEventListener("submit", function(even
     };
   
     localStorage.setItem("profileData", JSON.stringify(profileData));
+    const successMessage = document.getElementById("success-message");
+    successMessage.style.display = "block";
 
-    window.location.reload();
+    setTimeout(() => {
+        successMessage.style.display = "none";
+        
+        window.location.reload();
+    }, 3000);
   });
   
